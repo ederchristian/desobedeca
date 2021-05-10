@@ -1,0 +1,36 @@
+/* GENERAL */
+:root {
+  --black: #000;
+  --green: #00fb92;
+  --white: #fff;
+
+  --font: 'Montserrat', sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+  position: relative;
+  color: var(--black);
+}
+
+a , button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ANIMATIONS */
+.main-transition {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
