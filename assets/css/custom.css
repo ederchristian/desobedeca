@@ -239,6 +239,16 @@ a.main-button {
   padding: 32px 0;
 }
 
+.target__container h2 {
+  font-family: var(--fontSignPainter);
+  font-size: 40px;
+  padding-bottom: 16px;
+}
+
+.target__container h2 span {
+  display: block;
+}
+
 .target__container__group__item {
   text-align: center;
   margin-top: 32px;
@@ -248,16 +258,17 @@ a.main-button {
   justify-content: center;
 }
 
-.target__container__group__item h3 {
-  font-size: 20px;
-}
-
 .target__container__group p {
   line-height: 1.6;
-  font-size: 17px;
+  font-size: 16px;
   max-width: 700px;
   padding: 12px 0;
   margin: 0 auto;
+}
+
+.target__container__group p span {
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .target__container__group__item__icon {
@@ -273,23 +284,22 @@ a.main-button {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
-.target__container__group__item__icon img {
-  width: 70px;
-  height: 70px;
+.target__container__group .main-button {
+  margin: 32px auto 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .target__container {
-    padding: 50px 0;
+  .target__container h2 {
+    font-size: 50px;
+  }
+
+  .target__container h2 span {
+    display: initial;
   }
 
   .target__container__group__item {
     max-width: 350px;
     margin-top: 64px;
-  }
-
-  .target__container__group__item h3 {
-    font-size: 28px;
   }
 }
 
