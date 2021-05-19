@@ -4,7 +4,9 @@
   --green: #00fb92;
   --white: #fff;
 
-  --font: 'Montserrat', sans-serif;
+  --fontAnton: 'Anton', sans-serif;
+  --fontGotham: 'Gotham', sans-serif;
+  --fontSignPainter: 'SignPainter', sans-serif;
   --fw-400: 400;
   --fw-700: 700;
 }
@@ -16,11 +18,10 @@
 }
 
 body {
-  font-family: var(--font);
+  font-family: var(--fontGotham);
   font-weight: 400;
   position: relative;
   color: var(--black);
-  margin: 16px;
 }
 
 a , button {
@@ -74,6 +75,43 @@ a , button {
   }
 }
 
+/* FONTS */
+@font-face {
+  font-family: 'Anton';
+  src: url('../fonts/eot/Anton.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/eot/Anton.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('../fonts/woff2/Anton.woff2') format('woff2'), /* Super Modern Browsers */
+     url('../fonts/woff/Anton.woff') format('woff'), /* Pretty Modern Browsers */
+     url('../fonts/svg/Anton.svg') format("svg"), /* Legacy iOS */
+     url('../fonts/ttf/Anton.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/eot/Gotham.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/eot/Gotham.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('../fonts/woff2/Gotham.woff2') format('woff2'), /* Super Modern Browsers */
+     url('../fonts/woff/Gotham.woff') format('woff'), /* Pretty Modern Browsers */
+     url('../fonts/svg/Gotham.svg') format("svg"), /* Legacy iOS */
+     url('../fonts/ttf/Gotham.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SignPainter';
+  src: url('../fonts/eot/SignPainter.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/eot/SignPainter.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+     url('../fonts/woff2/SignPainter.woff2') format('woff2'), /* Super Modern Browsers */
+     url('../fonts/woff/SignPainter.woff') format('woff'), /* Pretty Modern Browsers */
+     url('../fonts/svg/SignPainter.svg') format("svg"), /* Legacy iOS */
+     url('../fonts/ttf/SignPainter.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* TEXT */
 h1,
 h2 {
@@ -99,9 +137,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: 16px solid var(--white);
 }
 
 .header__container {
@@ -114,7 +149,7 @@ h2 {
 
 .header__container img {
   width: 80%;
-  max-width: 350px;
+  max-width: 235px;
   margin: 32px auto 0;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
@@ -124,12 +159,14 @@ h2 {
 }
 
 .header__container__content p {
-  font-size: 14px;
+  font-size: 21px;
   line-height: 1.6;
   padding: 16px 0 32px;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
-.header__container__content a {
+a.main-button {
   width: 80%;
   height: 50px;
   display: flex;
@@ -149,39 +186,26 @@ h2 {
 @media screen and (min-width: 1024px) {
   .header__container {
     padding: 32px 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .header__container img {
     margin: 0 auto;
+    max-width: 235px;
   }
 
   .header__container img:hover {
     transform: scale(1.025);
   }
 
-  .header__container__content {
-    order: 1;
-    text-align: left;
-    margin-left: 64px;
-  }
-
   .header__container__content h1 {
     font-size: 44px;
   }
 
-  .header__container__content p {
-    font-size: 16px;
-  }
-
-  .header__container__content a {
+  a.main-button {
     font-size: 20px;
-    margin: initial;
   }
 
-  .header__container__content a:hover {
+  a.main-button:hover {
     background: var(--white);
     border: 2px solid var(--white);
     color: var(--black);
@@ -191,7 +215,6 @@ h2 {
 /* TARGET */
 .target {
   background: var(--green);
-  border-bottom: 16px solid var(--white);
 }
 
 .target__container {
@@ -214,8 +237,12 @@ h2 {
   font-size: 20px;
 }
 
-.target__container__group__item p {
+.target__container__group p {
   line-height: 1.6;
+  font-size: 17px;
+  max-width: 700px;
+  padding: 12px 0;
+  margin: 0 auto;
 }
 
 .target__container__group__item__icon {
@@ -241,12 +268,6 @@ h2 {
     padding: 50px 0;
   }
 
-  .target__container__group {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-  }
-
   .target__container__group__item {
     max-width: 350px;
     margin-top: 64px;
@@ -260,7 +281,6 @@ h2 {
 /* AUTHOR */
 .author {
   background: var(--green);
-  border-bottom: 16px solid var(--white);
 }
 
 .author__container {
@@ -271,6 +291,11 @@ h2 {
   text-align: center;
 }
 
+.author__container__signature {
+  width: 100%;
+  max-width: 400px;
+}
+
 .author__container__group img {
   width: 80%;
   max-width: 350px;
@@ -279,13 +304,16 @@ h2 {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
-.author__container__content h3 {
-  font-size: 20px;
-  padding: 32px 0 16px;
+.author__container__content {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .author__container__content p {
+  text-align: left;
   line-height: 1.6;
+  font-size: 17px;
+  padding: 12px 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -299,27 +327,11 @@ h2 {
     justify-content: space-between;
     padding-top: 32px;
   }
-
-  .author__container__group img:hover {
-    transform: scale(1.025);
-  }
-
-  .author__container__content {
-    order: 1;
-    text-align: left;
-    margin-left: 64px;
-  }
-
-  .author__container__content h3 {
-    font-size: 44px;
-  }
 }
 
 /* FOOTER */
 .footer {
   background: var(--green);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 .footer__container {
