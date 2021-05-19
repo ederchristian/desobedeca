@@ -151,18 +151,25 @@ h2 {
   width: 80%;
   max-width: 235px;
   margin: 32px auto 0;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .header__container__content h1 {
-  font-size: 24px;
+  font-size: 30px;
+  font-family: var(--fontAnton);
+  text-transform: uppercase;
+}
+
+.header__container__content h1 span {
+  font-size: 50px;
+  font-family: var(--fontSignPainter);
+  text-transform: initial;
 }
 
 .header__container__content p {
   font-size: 21px;
   line-height: 1.6;
   padding: 16px 0 32px;
-  max-width: 550px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -189,7 +196,7 @@ a.main-button {
   }
 
   .header__container img {
-    margin: 0 auto;
+    margin: 32px auto 16px;
     max-width: 235px;
   }
 
@@ -199,6 +206,14 @@ a.main-button {
 
   .header__container__content h1 {
     font-size: 44px;
+  }
+  
+  .header__container__content h1 span {
+    font-size: 65px;
+  }
+
+  .header__container__content p {
+    max-width: 500px;
   }
 
   a.main-button {
