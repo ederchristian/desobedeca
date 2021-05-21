@@ -140,7 +140,7 @@ h2 {
 }
 
 .header__container {
-  width: 90%;
+  width: 85%;
   max-width: 900px;
   margin: auto;
   padding: 32px 0;
@@ -148,7 +148,7 @@ h2 {
 }
 
 .header__container img {
-  width: 80%;
+  width: 85%;
   max-width: 235px;
   margin: 32px auto 0;
 }
@@ -174,7 +174,7 @@ h2 {
 }
 
 a.main-button {
-  width: 80%;
+  width: 85%;
   height: 50px;
   display: flex;
   align-items: center;
@@ -233,7 +233,7 @@ a.main-button {
 }
 
 .target__container {
-  width: 90%;
+  width: 85%;
   max-width: 900px;
   margin: auto;
   padding: 32px 0;
@@ -309,7 +309,7 @@ a.main-button {
 }
 
 .testimonials__container {
-  width: 90%;
+  width: 85%;
   max-width: 900px;
   margin: auto;
   padding: 32px 0;
@@ -456,7 +456,7 @@ a.main-button {
 }
 
 .author__container {
-  width: 90%;
+  width: 85%;
   max-width: 900px;
   margin: auto;
   padding: 32px 0;
@@ -469,7 +469,7 @@ a.main-button {
 }
 
 .author__container__group img {
-  width: 80%;
+  width: 85%;
   max-width: 350px;
   margin: 32px auto 0;
   border-radius: 5px;
@@ -507,7 +507,7 @@ a.main-button {
 }
 
 .footer__container {
-  width: 90%;
+  width: 85%;
   max-width: 900px;
   margin: auto;
   padding: 32px 0;
