@@ -1,6 +1,6 @@
 // Open source from: https://codepen.io/pascallllacroix/pen/MWpeyKr
 document.querySelectorAll(".box-gold").forEach(function (box) {
-  box.style.height = box.offsetWidth / 1.4 + "px";
+  box.style.height = box.offsetWidth / 1.3 + "px";
 });
 
 document.querySelectorAll(".carousel").forEach(function (carousel) {
