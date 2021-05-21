@@ -354,7 +354,7 @@ a.main-button {
   color: var(--black);
   background: var(--white);
   border-radius: 7px;
-  padding: 0 32px;
+  padding: 0 26px;
   text-align: left;
 }
 
@@ -510,11 +510,28 @@ a.main-button {
   width: 85%;
   max-width: 900px;
   margin: auto;
-  padding: 32px 0;
+  padding: 40px 0 100px;
   text-align: center;
 }
 
 .footer__container p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
+}
+
+.footer__container__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 32px;
+}
+
+.footer__container__logos img:first-child {
+  width: 76px;
+  margin-right: 16px;
+}
+
+.footer__container__logos img:last-child {
+  width: 125px;
 }
